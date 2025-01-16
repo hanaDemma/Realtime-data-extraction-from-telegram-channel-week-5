@@ -1,1 +1,8 @@
 .week5/ 
+.env
+*.session/
+new_scraping_session.session
+*.csv
+telegram_data.csv
+telegram_images/
+telegram_documents/
