@@ -27,12 +27,11 @@ os.makedirs(document_folder, exist_ok=True)
 
   # List of channels to scrape
 channel_username = [
-            '@ZemenExpress',
+            '@ZemenExpress',        
             '@nevacomputer', 
             '@helloomarketethiopia',
             '@forfreemarket',
-            '@Shewabrand'    
-        ]
+            '@Shewabrand']
 
 # Function to write messages to the CSV file
 def write_to_csv(message_date, sender_id, message_id, amharic_text,image_file, document_file):
@@ -43,9 +42,8 @@ def write_to_csv(message_date, sender_id, message_id, amharic_text,image_file, d
             message_date, 
             sender_id,
             message_id,
-            amharic_text.strip(),
-            image_file,
-            document_file
+            amharic_text.strip()
+            
         ])
 
 async def scrape_telegram_channels(channel):
@@ -59,7 +57,7 @@ async def scrape_telegram_channels(channel):
     # Write CSV header
     with open(csv_file, 'w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
-        writer.writerow(['Message Date', 'Sender ID', 'Message ID', 'Product Description', 'Image Filename'])
+        writer.writerow(['Message Date', 'Sender ID', 'Message ID', 'Product Description'])
     for channel_username in channel:
         entity = await client.get_entity(channel_username)
         channel_title = entity.title
@@ -67,7 +65,7 @@ async def scrape_telegram_channels(channel):
         async for message in client.iter_messages(entity, limit=200):
             image_file = ''  # Initialize empty image filename
             document_file = ''   # Initialize empty document filename
-            # Download media (images) if available
+            # # Download media (images) if available
             if message.photo:  # Check for images (photos only)
                 image_file = await message.download_media(file=image_folder)
 
