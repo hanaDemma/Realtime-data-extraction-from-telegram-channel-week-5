@@ -23,3 +23,12 @@ image_folder = 'telegram_images'
 document_folder = 'telegram_documents'
 os.makedirs(image_folder, exist_ok=True)  # Create folder if it doesn't exist
 os.makedirs(document_folder, exist_ok=True)
+
+  # List of channels to scrape
+channels = [
+            '@ZemenExpress',
+            '@nevacomputer', 
+            '@helloomarketethiopia',
+            '@forfreemarket',
+            '@Shewabrand'    
+        ]
