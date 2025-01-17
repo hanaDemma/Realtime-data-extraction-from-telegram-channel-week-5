@@ -6,3 +6,4 @@ new_scraping_session.session
 telegram_data.csv
 telegram_images/
 telegram_documents/
+*.conll
