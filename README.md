@@ -4,6 +4,10 @@
 ## Project Overview
 
 EthioMart aims to centralize e-commerce activities from various Ethiopian-based Telegram channels, enabling real-time data extraction to create a unified platform. This project focuses on:
+* Extracting real-time data (text, images, documents) from Telegram channels such as  **@ZemenExpress** ,**@nevacomputer** ,**@helloomarketethiopia**,**forfreemarket**, **Shewabrand**,   
+* Fine-tuning a large language model (LLM) for Amharic Named Entity Recognition (NER).
+* Identifying key entities such as products, prices, and locations in Amharic text.
+
 
 ## Folder Structure 
 
@@ -20,15 +24,7 @@ REALtIME-DATA-EXTRACTION-FROM-TELEGRAM-CHANNEL-WORKFLOW/
 ├── .gitignore 
 ├── README.md 
 └── requirements.txt 
-
-* Extracting real-time data (text, images, documents) from Telegram channels such as  **@ZemenExpress** ,**@nevacomputer** ,**@helloomarketethiopia**,**forfreemarket**, **Shewabrand**,   
-* Fine-tuning a large language model (LLM) for Amharic Named Entity Recognition (NER).
-* Identifying key entities such as products, prices, and locations in Amharic text.
-
-This repository contains code for data ingestion, preprocessing, and labeling for NER tasks, supporting EthioMart’s vision of a seamless e-commerce platform.
-
 ## Features
-
 * **Real-Time Data Ingestion** : A custom scraper that connects to Telegram channels and fetches messages, images, and metadata.
 * **Text Preprocessing** : Tokenization, normalization, and handling Amharic-specific linguistic features.
 * **NER Labeling** : Annotating text data for NER tasks in the CoNLL format, labeling products, prices, and locations.
